@@ -9,7 +9,7 @@
 #include "MPU6050_Reg.h"
 #include "OLED.h"
 #include "OLED.h"
-#include "pwm.h"
+
 
 void GPIO_INIT(void)
 {
@@ -34,16 +34,6 @@ int main()
 	MPU6050_Init();
 	GPIO_INIT();
 	HMC5883L_Init();
-	
-
-		PWM_Init();
-	
-		PWM_SetCompare1(700);
-		Delay_ms(4000);
-		PWM_SetCompare1(400);
-		Delay_ms(2000);
-
-    PWM_SetCompare1(600);	
 	
 	while(1)
 	{

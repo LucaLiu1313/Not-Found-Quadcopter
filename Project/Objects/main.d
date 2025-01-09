@@ -41,4 +41,3 @@
 .\objects\main.o: ..\Hardware\MyI2C.h
 .\objects\main.o: ..\Hardware\MPU6050_Reg.h
 .\objects\main.o: ..\Hardware\OLED.h
-.\objects\main.o: ..\Hardware\pwm.h
