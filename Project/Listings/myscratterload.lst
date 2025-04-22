@@ -1,0 +1,178 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             |.text|,CODE,READONLY
+    2 00000000         myScatterLoad
+                               PROC
+    3 00000000                 EXPORT           myScatterLoad
+    4 00000000                 IMPORT           |Image$$RW_IRAM1$$Base| ;´Ó±ð´¦
+                                                            µ¼Èëdata¶ÎµÄÁ´½ÓµØÖ
+                                                            ·
+    5 00000000                 IMPORT           |Image$$RW_IRAM1$$Length| ;´Ó±ð
+                                                            ´¦µ¼Èëdata¶ÎµÄ³¤¶È
+    6 00000000                 IMPORT           |Load$$RW_IRAM1$$Base| ;´Ó±ð´¦µ
+                                                            ¼Èëdata¶ÎµÄ¼ÓÔØµØÖ·
+                                                            
+    7 00000000                 IMPORT           |Image$$RW_IRAM1$$ZI$$Base| ;´Ó
+                                                            ±ð´¦µ¼ÈëZI¶ÎµÄÁ´½Óµ
+                                                            ØÖ·
+    8 00000000                 IMPORT           |Image$$RW_IRAM1$$ZI$$Length| ;
+                                                            ´Ó±ð´¦µ¼ÈëZI¶ÎµÄ³¤¶
+                                                            È
+    9 00000000         
+   10 00000000         ; ¸´ÖÆÊý¾Ý¶Î
+   11 00000000 4808            LDR              R0, = |Load$$RW_IRAM1$$Base| ;½
+                                                            «data¶ÎµÄ¼ÓÔØµØÖ·´æ
+                                                            ÈëR0¼Ä´æÆ÷
+   12 00000002 4909            LDR              R1, = |Image$$RW_IRAM1$$Base| ;
+                                                            ½«data¶ÎµÄÁ´½ÓµØÖ·´
+                                                            æÈëR1¼Ä´æÆ÷
+   13 00000004 4A09            LDR              R2, = |Image$$RW_IRAM1$$Length|
+ 
+                                                            ;½«data¶ÎµÄ³¤¶È´æÈë
+                                                            R2¼Ä´æÆ÷
+   14 00000006         CopyData
+   15 00000006 F1A2 0204       SUB              R2, R2, #4  ;Ã¿´Î¸´ÖÆ4¸ö×Ö½ÚµÄd
+                                                            ata¶ÎÊý¾Ý
+   16 0000000A 5883            LDR              R3, [R0, R2] ;°Ñ¼ÓÔØµØÖ·´¦µÄÖµÈ
+                                                            ¡³öµ½R3¼Ä´æÆ÷
+   17 0000000C 508B            STR              R3, [R1, R2] ;°ÑÈ¡³öµÄÖµ´ÓR3¼Ä´
+                                                            æÆ÷´æÈëµ½Á´½ÓµØÖ·  
+                                                               
+   18 0000000E 2A00            CMP              R2, #0      ;½«¼ÆÊýºÍ0Ïà±È½Ï
+   19 00000010 D1F9            BNE              CopyData    ;Èç¹û²»ÏàµÈ£¬Ìø×ªµ½
+                                                            CopyData±êÇ©´¦£¬Ïàµ
+                                                            ÈÔòÍùÏÂÖ´ÐÐ
+   20 00000012         
+   21 00000012         ; Çå³ýBSS¶Î
+   22 00000012 4807            LDR              R0, = |Image$$RW_IRAM1$$ZI$$Bas
+e| 
+                                                            ;½«bss¶ÎµÄÁ´½ÓµØÖ·´
+                                                            æÈëR1¼Ä´æÆ÷
+   23 00000014 4907            LDR              R1, = |Image$$RW_IRAM1$$ZI$$Len
+gth| 
+                                                            ;½«bss¶ÎµÄ³¤¶È´æÈëR
+                                                            2¼Ä´æÆ÷
+   24 00000016         CleanBss
+   25 00000016 F1A1 0104       SUB              R1, R1, #4  ;Ã¿´ÎÇå³ý4¸ö×Ö½ÚµÄb
+                                                            ss¶ÎÊý¾Ý
+   26 0000001A F04F 0300       MOV              R3, #0      ;½«0´æÈër3¼Ä´æÆ÷
+   27 0000001E 5043            STR              R3, [R0, R1] ;°ÑR3¼Ä´æÆ÷´æÈëµ½Á
+                                                            ´½ÓµØÖ·     
+   28 00000020 2900            CMP              R1, #0      ;½«¼ÆÊýºÍ0Ïà±È½Ï
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+   29 00000022 D1F8            BNE              CleanBss    ;Èç¹û²»ÏàµÈ£¬Ìø×ªµ½
+                                                            CleanBss±êÇ©´¦£¬Ïàµ
+                                                            ÈÔòÍùÏÂÖ´ÐÐ
+   30 00000024         
+   31 00000024                 ALIGN                        ;Ìî³ä×Ö½ÚÊ¹µØÖ·¶ÔÆë
+                                                            
+   32 00000024                 ENDP
+   33 00000024         
+   34 00000024                 END
+              00000000 
+              00000000 
+              00000000 
+              00000000 
+              00000000 
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
+erwork --depend=.\objects\myscratterload.d -o.\objects\myscratterload.o -I.\RTE
+\_Target_1 -ID:\keil\keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\D
+evice\ST\STM32F4xx\Include -ID:\keil\keil_v5\ARM\CMSIS\Include --predefine="__U
+VISION_VERSION SETA 527" --predefine="STM32F401xE SETA 1" --list=.\listings\mys
+cratterload.lst ..\CMSIS\myScratterLoad.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.text 00000000
+
+Symbol: .text
+   Definitions
+      At line 1 in file ..\CMSIS\myScratterLoad.s
+   Uses
+      None
+Comment: .text unused
+CleanBss 00000016
+
+Symbol: CleanBss
+   Definitions
+      At line 24 in file ..\CMSIS\myScratterLoad.s
+   Uses
+      At line 29 in file ..\CMSIS\myScratterLoad.s
+Comment: CleanBss used once
+CopyData 00000006
+
+Symbol: CopyData
+   Definitions
+      At line 14 in file ..\CMSIS\myScratterLoad.s
+   Uses
+      At line 19 in file ..\CMSIS\myScratterLoad.s
+Comment: CopyData used once
+myScatterLoad 00000000
+
+Symbol: myScatterLoad
+   Definitions
+      At line 2 in file ..\CMSIS\myScratterLoad.s
+   Uses
+      At line 3 in file ..\CMSIS\myScratterLoad.s
+Comment: myScatterLoad used once
+4 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+External symbols
+
+Image$$RW_IRAM1$$Base 00000000
+
+Symbol: Image$$RW_IRAM1$$Base
+   Definitions
+      At line 4 in file ..\CMSIS\myScratterLoad.s
+   Uses
+      At line 12 in file ..\CMSIS\myScratterLoad.s
+Comment: Image$$RW_IRAM1$$Base used once
+Image$$RW_IRAM1$$Length 00000000
+
+Symbol: Image$$RW_IRAM1$$Length
+   Definitions
+      At line 5 in file ..\CMSIS\myScratterLoad.s
+   Uses
+      At line 13 in file ..\CMSIS\myScratterLoad.s
+Comment: Image$$RW_IRAM1$$Length used once
+Image$$RW_IRAM1$$ZI$$Base 00000000
+
+Symbol: Image$$RW_IRAM1$$ZI$$Base
+   Definitions
+      At line 7 in file ..\CMSIS\myScratterLoad.s
+   Uses
+      At line 22 in file ..\CMSIS\myScratterLoad.s
+Comment: Image$$RW_IRAM1$$ZI$$Base used once
+Image$$RW_IRAM1$$ZI$$Length 00000000
+
+Symbol: Image$$RW_IRAM1$$ZI$$Length
+   Definitions
+      At line 8 in file ..\CMSIS\myScratterLoad.s
+   Uses
+      At line 23 in file ..\CMSIS\myScratterLoad.s
+Comment: Image$$RW_IRAM1$$ZI$$Length used once
+Load$$RW_IRAM1$$Base 00000000
+
+Symbol: Load$$RW_IRAM1$$Base
+   Definitions
+      At line 6 in file ..\CMSIS\myScratterLoad.s
+   Uses
+      At line 11 in file ..\CMSIS\myScratterLoad.s
+Comment: Load$$RW_IRAM1$$Base used once
+5 symbols
+344 symbols in table
