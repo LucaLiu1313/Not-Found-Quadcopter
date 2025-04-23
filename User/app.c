@@ -88,7 +88,10 @@ void Task_motor(void *p_arg)
 
         if (ppm_count > 0 || finish == 1) { // ????(??????? finish ????)
             PWM_SetCompare1(ppm_value);
-            Serial_SendNumber(5, 1);
+					  PWM_SetCompare2(ppm_value);
+						PWM_SetCompare3(ppm_value);
+						PWM_SetCompare4(ppm_value);
+					Serial_SendNumber(5, 1);
         }
 
         OSTimeDly(OS_TICKS_PER_SEC / 10); // ?? 100ms

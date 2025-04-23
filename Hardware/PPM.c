@@ -120,7 +120,7 @@ void TIM2_IRQHandler(void)
                 finish = 0;
                 ch = 0;
                 // 将 PPM_Data[0] 存入缓冲区
-                ppm_buffer[ppm_head] = PPM_Data[0];
+                ppm_buffer[ppm_head] = PPM_Data[2];
                 ppm_head = (ppm_head + 1) % PPM_BUFFER_SIZE; // 更新写入位置
                 if (ppm_count < PPM_BUFFER_SIZE) {
                     ppm_count++; // 增加计数
