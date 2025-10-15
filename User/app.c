@@ -108,14 +108,13 @@ void Task_SendInfo(void *p_arg)
 	
 	int16_t AX, AY, AZ;
 	int16_t GX, GY, GZ;
-	int16_t MX, MY, MZ;
+	float MX, MY, MZ;
 	
 	while(1)
 	{
 		Serial_SendNumber(7,1);
 		MPU6050_GetData(&AX, &AY, &AZ, &GX, &GY, &GZ);
-		//MPU_get_HMC();
-		HMC5883L_GetData1(&MX, &MY, &MZ);
+		MPU_get_HMCData(&MX, &MY, &MZ);
 		OLED_ShowHexNum(2, 1, AX, 5);
 		OLED_ShowHexNum(3, 1, AY, 5);
 		OLED_ShowHexNum(4, 1, AZ, 5);

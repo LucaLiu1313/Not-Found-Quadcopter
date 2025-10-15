@@ -85,10 +85,10 @@ ARM Macro Assembler    Page 2
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
 erwork --depend=.\objects\myscratterload.d -o.\objects\myscratterload.o -I.\RTE
-\_Target_1 -ID:\keil\keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\D
-evice\ST\STM32F4xx\Include -ID:\keil\keil_v5\ARM\CMSIS\Include --predefine="__U
-VISION_VERSION SETA 527" --predefine="STM32F401xE SETA 1" --list=.\listings\mys
-cratterload.lst ..\CMSIS\myScratterLoad.s
+\_Target_1 -IC:\Keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\S
+T\STM32F4xx\Include -IC:\Keil5\ARM\CMSIS\Include --predefine="__UVISION_VERSION
+ SETA 524" --predefine="STM32F401xE SETA 1" --list=.\listings\myscratterload.ls
+t ..\CMSIS\myScratterLoad.s
 
 
 

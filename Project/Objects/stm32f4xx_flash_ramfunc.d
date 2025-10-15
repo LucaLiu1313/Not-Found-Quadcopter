@@ -2,7 +2,7 @@
 .\objects\stm32f4xx_flash_ramfunc.o: ..\Library\inc\stm32f4xx_flash_ramfunc.h
 .\objects\stm32f4xx_flash_ramfunc.o: ..\CMSIS\stm32f4xx.h
 .\objects\stm32f4xx_flash_ramfunc.o: ..\CMSIS\include\core_cm4.h
-.\objects\stm32f4xx_flash_ramfunc.o: D:\keil\keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\stm32f4xx_flash_ramfunc.o: C:\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\stm32f4xx_flash_ramfunc.o: ..\CMSIS\include\core_cmInstr.h
 .\objects\stm32f4xx_flash_ramfunc.o: ..\CMSIS\include\core_cmFunc.h
 .\objects\stm32f4xx_flash_ramfunc.o: ..\CMSIS\include\core_cmSimd.h

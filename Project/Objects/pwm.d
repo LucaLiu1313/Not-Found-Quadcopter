@@ -2,7 +2,7 @@
 .\objects\pwm.o: ..\include\stm32.h
 .\objects\pwm.o: ..\CMSIS\stm32f4xx.h
 .\objects\pwm.o: ..\CMSIS\include\core_cm4.h
-.\objects\pwm.o: D:\keil\keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\pwm.o: C:\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\pwm.o: ..\CMSIS\include\core_cmInstr.h
 .\objects\pwm.o: ..\CMSIS\include\core_cmFunc.h
 .\objects\pwm.o: ..\CMSIS\include\core_cmSimd.h

@@ -1,7 +1,7 @@
 .\objects\serial.o: ..\Hardware\Serial.c
 .\objects\serial.o: ..\CMSIS\stm32f4xx.h
 .\objects\serial.o: ..\CMSIS\include\core_cm4.h
-.\objects\serial.o: D:\keil\keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\serial.o: C:\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\serial.o: ..\CMSIS\include\core_cmInstr.h
 .\objects\serial.o: ..\CMSIS\include\core_cmFunc.h
 .\objects\serial.o: ..\CMSIS\include\core_cmSimd.h
@@ -37,8 +37,8 @@
 .\objects\serial.o: ..\include\OS.h
 .\objects\serial.o: ..\core\ucos_ii.h
 .\objects\serial.o: ..\ports\app_cfg.h
-.\objects\serial.o: D:\keil\keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
-.\objects\serial.o: D:\keil\keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\serial.o: C:\Keil5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\serial.o: C:\Keil5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\serial.o: ..\ports\os_cfg.h
 .\objects\serial.o: ..\ports\os_cpu.h
 .\objects\serial.o: ..\core\os_trace.h

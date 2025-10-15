@@ -1,7 +1,7 @@
 .\objects\oled.o: ..\Hardware\OLED.c
 .\objects\oled.o: ..\CMSIS\stm32f4xx.h
 .\objects\oled.o: ..\CMSIS\include\core_cm4.h
-.\objects\oled.o: D:\keil\keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\oled.o: C:\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\oled.o: ..\CMSIS\include\core_cmInstr.h
 .\objects\oled.o: ..\CMSIS\include\core_cmFunc.h
 .\objects\oled.o: ..\CMSIS\include\core_cmSimd.h

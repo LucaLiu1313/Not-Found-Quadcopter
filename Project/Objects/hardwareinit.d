@@ -1,7 +1,7 @@
 .\objects\hardwareinit.o: ..\Init\hardwareInit.c
 .\objects\hardwareinit.o: ..\include\hardware.h
 .\objects\hardwareinit.o: ..\Hardware\Delay.h
-.\objects\hardwareinit.o: D:\keil\keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\hardwareinit.o: C:\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\hardwareinit.o: ..\Hardware\MPU6050.h
 .\objects\hardwareinit.o: ..\Hardware\HMC5883L.h
 .\objects\hardwareinit.o: ..\Hardware\Serial.h
@@ -12,8 +12,8 @@
 .\objects\hardwareinit.o: ..\Hardware\PPM.h
 .\objects\hardwareinit.o: ..\core\ucos_ii.h
 .\objects\hardwareinit.o: ..\ports\app_cfg.h
-.\objects\hardwareinit.o: D:\keil\keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
-.\objects\hardwareinit.o: D:\keil\keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\hardwareinit.o: C:\Keil5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\hardwareinit.o: C:\Keil5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\hardwareinit.o: ..\ports\os_cfg.h
 .\objects\hardwareinit.o: ..\ports\os_cpu.h
 .\objects\hardwareinit.o: ..\core\os_trace.h

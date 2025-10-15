@@ -28,6 +28,17 @@
 #define MPU6050_USER_CTRL       0x6A
 #define MPU6050_INT_PIN_CFG     0x37
 
+#define MPU6050_SLV0_ADDR		0x25
+#define MPU6050_SLV0_REG		0x26
+#define MPU6050_SLV0_CTRL		0x27
+
+#define MPU6050_HMC_XOUT_H		0x49
+#define MPU6050_HMC_XOUT_L		0x4A
+#define MPU6050_HMC_YOUT_H		0x4B
+#define MPU6050_HMC_YOUT_L		0x4C
+#define MPU6050_HMC_ZOUT_H		0x4D
+#define MPU6050_HMC_ZOUT_L		0x4E
+
+#define MPU6050_ADDRESS		0xD0		//MPU6050的I2C从机8bit地址(左移一位后)
 
 #endif
-

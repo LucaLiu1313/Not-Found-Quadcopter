@@ -60,7 +60,6 @@
 ".\objects\hardwareinit.o"
 ".\objects\led.o"
 ".\objects\mpu6050.o"
-".\objects\myi2c.o"
 ".\objects\delay.o"
 ".\objects\serial.o"
 ".\objects\hmc5883l.o"

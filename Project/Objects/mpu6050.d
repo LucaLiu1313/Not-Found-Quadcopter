@@ -1,7 +1,7 @@
 .\objects\mpu6050.o: ..\Hardware\MPU6050.c
 .\objects\mpu6050.o: ..\CMSIS\stm32f4xx.h
 .\objects\mpu6050.o: ..\CMSIS\include\core_cm4.h
-.\objects\mpu6050.o: D:\keil\keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\mpu6050.o: C:\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\mpu6050.o: ..\CMSIS\include\core_cmInstr.h
 .\objects\mpu6050.o: ..\CMSIS\include\core_cmFunc.h
 .\objects\mpu6050.o: ..\CMSIS\include\core_cmSimd.h
@@ -34,5 +34,5 @@
 .\objects\mpu6050.o: ..\Library\inc\stm32f4xx_dac.h
 .\objects\mpu6050.o: ..\Library\inc\stm32f4xx_dcmi.h
 .\objects\mpu6050.o: ..\Library\inc\stm32f4xx_fsmc.h
-.\objects\mpu6050.o: ..\Hardware\MyI2C.h
 .\objects\mpu6050.o: ..\Hardware\MPU6050_Reg.h
+.\objects\mpu6050.o: ..\Hardware\Serial.h

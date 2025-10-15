@@ -3,7 +3,7 @@
 .\objects\stm32f4xx_dfsdm.o: ..\Library\inc\stm32f4xx_rcc.h
 .\objects\stm32f4xx_dfsdm.o: ..\CMSIS\stm32f4xx.h
 .\objects\stm32f4xx_dfsdm.o: ..\CMSIS\include\core_cm4.h
-.\objects\stm32f4xx_dfsdm.o: D:\keil\keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\stm32f4xx_dfsdm.o: C:\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\stm32f4xx_dfsdm.o: ..\CMSIS\include\core_cmInstr.h
 .\objects\stm32f4xx_dfsdm.o: ..\CMSIS\include\core_cmFunc.h
 .\objects\stm32f4xx_dfsdm.o: ..\CMSIS\include\core_cmSimd.h

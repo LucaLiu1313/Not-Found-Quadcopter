@@ -2,7 +2,7 @@
 .\objects\main.o: ..\include\stm32.h
 .\objects\main.o: ..\CMSIS\stm32f4xx.h
 .\objects\main.o: ..\CMSIS\include\core_cm4.h
-.\objects\main.o: D:\keil\keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\main.o: C:\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\main.o: ..\CMSIS\include\core_cmInstr.h
 .\objects\main.o: ..\CMSIS\include\core_cmFunc.h
 .\objects\main.o: ..\CMSIS\include\core_cmSimd.h
@@ -39,8 +39,8 @@
 .\objects\main.o: ..\include\OS.h
 .\objects\main.o: ..\core\ucos_ii.h
 .\objects\main.o: ..\ports\app_cfg.h
-.\objects\main.o: D:\keil\keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
-.\objects\main.o: D:\keil\keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\main.o: C:\Keil5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\main.o: C:\Keil5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\main.o: ..\ports\os_cfg.h
 .\objects\main.o: ..\ports\os_cpu.h
 .\objects\main.o: ..\core\os_trace.h

@@ -1,7 +1,7 @@
 .\objects\hmc5883l.o: ..\Hardware\HMC5883L.c
 .\objects\hmc5883l.o: ..\CMSIS\stm32f4xx.h
 .\objects\hmc5883l.o: ..\CMSIS\include\core_cm4.h
-.\objects\hmc5883l.o: D:\keil\keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\hmc5883l.o: C:\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\hmc5883l.o: ..\CMSIS\include\core_cmInstr.h
 .\objects\hmc5883l.o: ..\CMSIS\include\core_cmFunc.h
 .\objects\hmc5883l.o: ..\CMSIS\include\core_cmSimd.h
@@ -34,5 +34,8 @@
 .\objects\hmc5883l.o: ..\Library\inc\stm32f4xx_dac.h
 .\objects\hmc5883l.o: ..\Library\inc\stm32f4xx_dcmi.h
 .\objects\hmc5883l.o: ..\Library\inc\stm32f4xx_fsmc.h
-.\objects\hmc5883l.o: ..\Hardware\MyI2C.h
 .\objects\hmc5883l.o: ..\Hardware\MPU6050.h
+.\objects\hmc5883l.o: ..\Hardware\MPU6050_Reg.h
+.\objects\hmc5883l.o: ..\Hardware\HMC5883L_Reg.h
+.\objects\hmc5883l.o: ..\Hardware\Delay.h
+.\objects\hmc5883l.o: ..\Hardware\Serial.h

@@ -2,7 +2,7 @@
 .\objects\ppm.o: ..\Library\inc\stm32f4xx_tim.h
 .\objects\ppm.o: ..\CMSIS\stm32f4xx.h
 .\objects\ppm.o: ..\CMSIS\include\core_cm4.h
-.\objects\ppm.o: D:\keil\keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\ppm.o: C:\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\ppm.o: ..\CMSIS\include\core_cmInstr.h
 .\objects\ppm.o: ..\CMSIS\include\core_cmFunc.h
 .\objects\ppm.o: ..\CMSIS\include\core_cmSimd.h
@@ -38,8 +38,8 @@
 .\objects\ppm.o: ..\include\OS.h
 .\objects\ppm.o: ..\core\ucos_ii.h
 .\objects\ppm.o: ..\ports\app_cfg.h
-.\objects\ppm.o: D:\keil\keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
-.\objects\ppm.o: D:\keil\keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\ppm.o: C:\Keil5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\ppm.o: C:\Keil5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\ppm.o: ..\ports\os_cfg.h
 .\objects\ppm.o: ..\ports\os_cpu.h
 .\objects\ppm.o: ..\core\os_trace.h

@@ -9,8 +9,7 @@ uint8_t HMC5883L_ReadReg(uint8_t RegAddress);
 
 void HMC5883L_Init(void);
 
-void MPU_get_HMC(void);
-
+void MPU_get_HMCData(float *MagX, float *MagY, float *MagZ);
 
 void HMC5883L_GetData(int16_t * magn_x_gs,int16_t *magn_y_gs,int16_t *magn_z_gs);
 
