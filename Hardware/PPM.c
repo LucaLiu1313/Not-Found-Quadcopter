@@ -6,7 +6,7 @@
 #include "stm32f4xx_gpio.h"
 #include "stm32f4xx_rcc.h"
 #include "misc.h"
-#include "OS.h"
+#include "ppm.h"
 
 void PPM_Init(void)
 {
@@ -60,6 +60,11 @@ int ch=0;
 int PPM_Data[8];
 int past;
 int delta;
+
+uint16_t ppm_buffer[PPM_BUFFER_SIZE] = {0};
+uint8_t ppm_head = 0;
+uint8_t ppm_tail = 0;
+uint8_t ppm_count = 0;
 
 //void TIM2_IRQHandler(void)
 //{    

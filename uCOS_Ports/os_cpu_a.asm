@@ -331,6 +331,14 @@ SYSTICK_VAL     EQU     SYSTICK_BASE + 0x08
 SCB_SHPR3       EQU     0xE000ED20
 
 SystemInit
+FPU_Enable
+	LDR   R0, =0xE000ED88		;加载 CPACR 寄存器地址
+	LDR   R1, [R0]
+	ORR   R1, R1, #(0xF << 20)	;设置 CP10 和 CP11 完全访问从而启用 FPU
+	STR   R1, [R0]
+	DSB							;数据同步屏障指令
+	ISB							;指令同步屏障指令
+
     LDR R0, =RCC_CR
     LDR R1, [R0]                ; 读取当前RCC_CR的值
     ORR R1, R1, #(1 << 16) :or: (1 << 18)    ; 启用HSEON（不清除其他位）
@@ -354,10 +362,10 @@ Wait_HSE_Ready
 ;---------------------------------------------
     LDR R0, =RCC_PLLCFGR
     MOV R1, #0x00000000
-    ORR R1, R1, #(8 << 0)     ; PLLM = 16 (bits 5:0)
-    ORR R1, R1, #(336 << 6)    ; PLLN = 336 (bits 14:6)
-    ORR R1, R1, #(1<< 16)     ; PLLP = 0b00 
-    ORR R1, R1, #(1 << 22)     ; PLLSRC = 1 
+    ORR R1, R1, #(8 << 0)     	; PLLM = 8 (bits 5:0)
+    ORR R1, R1, #(336 << 6)    	; PLLN = 336 (bits 14:6)
+    ORR R1, R1, #(1 << 16)     	; PLLP = 4 (bits 17:16) 
+    ORR R1, R1, #(1 << 22)     	; PLLSRC = 1 (bit 22)
     STR R1, [R0]
 
 ;---------------------------------------------

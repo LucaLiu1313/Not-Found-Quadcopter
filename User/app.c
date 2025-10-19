@@ -2,14 +2,13 @@
 #include "hardware.h"
 #include "OS.h"
 #include "app.h"
+#include "imu.h"
 
-extern  int PPM_Data[8];
+extern int PPM_Data[8];
 extern uint8_t Serial_RxData;
 
-uint16_t ppm_buffer[PPM_BUFFER_SIZE] = {0};
-uint8_t ppm_head = 0;
-uint8_t ppm_tail = 0;
-uint8_t ppm_count = 0;
+int16_t AX,AY,AZ,GX,GY,GZ;
+float MX,MY,MZ;
 
 OS_STK task_motor_stk[APP_CFG_STARTUP_TASK_STK_SIZE]; //定义栈
 OS_STK task_sendInfo_stk[APP_CFG_STARTUP_TASK_STK_SIZE]; //定义栈
@@ -63,7 +62,7 @@ void Task_Start(void *p_arg)
 ////	    OLED_ShowNum(2, 2, PPM_Data[5], 5);
 ////	    OLED_ShowNum(3, 2, PPM_Data[6], 5);
 ////	    OLED_ShowNum(4, 2, PPM_Data[7], 5);	
-//		Delay_ms(10);
+//		OSTimeDly(OS_TICKS_PER_SEC / 10);
 //	}
 //}
 
@@ -104,26 +103,41 @@ void Task_motor(void *p_arg)
 void Task_SendInfo(void *p_arg) 
 { 
 	(void)p_arg;
-	char buffer[128];// using buffer to avoid data confusing
-	
-	int16_t AX, AY, AZ;
-	int16_t GX, GY, GZ;
-	float MX, MY, MZ;
+//	char buffer[128];// using buffer to avoid data confusing
+	float Pitch, Roll, Yaw;
 	
 	while(1)
 	{
 		Serial_SendNumber(7,1);
 		MPU6050_GetData(&AX, &AY, &AZ, &GX, &GY, &GZ);
 		MPU_get_HMCData(&MX, &MY, &MZ);
-		OLED_ShowHexNum(2, 1, AX, 5);
-		OLED_ShowHexNum(3, 1, AY, 5);
-		OLED_ShowHexNum(4, 1, AZ, 5);
-		OLED_ShowHexNum(2, 8, GX, 5);
-		OLED_ShowHexNum(3, 8, GY, 5);
-		OLED_ShowHexNum(4, 8, GZ, 5);
-		OLED_ShowHexNum(1, 1, MX, 5);
-		OLED_ShowHexNum(1, 8, MY, 5);
-		Delay_ms(100);
+		
+		IMU_update(&Roll,&Pitch,&Yaw);
+		
+		OLED_ShowString(2,1,"Pitch=");
+		OLED_ShowString(3,1,"Roll=");
+		OLED_ShowString(4,1,"Yaw=");
+		OLED_ShowFNum(2, 8, Pitch, 5,2);
+		OLED_ShowFNum(3, 8, Roll, 5,2);
+		OLED_ShowFNum(4, 8, Yaw, 5,2);
+		
+		Serial_SendString("{\"roll\":");
+		Serial_SendFloatSimple(Roll, 1);
+		Serial_SendString(",\"pitch\":");
+		Serial_SendFloatSimple(Pitch, 1);
+		Serial_SendString(",\"yaw\":");
+		Serial_SendFloatSimple(Yaw, 1);
+		Serial_SendString("}\n");
+		
+//		OLED_ShowHexNum(2, 1, AX, 5);
+//		OLED_ShowHexNum(3, 1, AY, 5);
+//		OLED_ShowHexNum(4, 1, AZ, 5);
+//		OLED_ShowHexNum(2, 8, GX, 5);
+//		OLED_ShowHexNum(3, 8, GY, 5);
+//		OLED_ShowHexNum(4, 8, GZ, 5);
+//		OLED_ShowHexNum(1, 1, MX, 5);
+//		OLED_ShowHexNum(1, 8, MY, 5);
+		OSTimeDly(OS_TICKS_PER_SEC / 10);
 	}
 }
  //收信任务
@@ -133,8 +147,8 @@ void Task_GetInfo(void *p_arg)
 	while(1)
 	{
 		Serial_SendNumber(6,1);
-		OSTaskSuspend (TASK_GetInfo_PRIO);
-		Delay_ms(100);
+		OSTimeDly(OS_TICKS_PER_SEC / 10); // 延时 100ms
+		//Delay_ms(100);
 		//OSTimeDlyHMSM(0, 10, 0, 0);
 	}
 }

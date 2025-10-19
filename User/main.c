@@ -1,6 +1,7 @@
 #include "stm32.h"                  // Device heade 
 #include "hardwareInit.h"
 #include "OS.h"
+#include "app.h"
 
 static OS_STK startup_task_stk[APP_CFG_STARTUP_TASK_STK_SIZE];
 

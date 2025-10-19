@@ -2,8 +2,6 @@
 #include "MPU6050.h"
 #include "HMC5883L.h"  
 #include "Serial.h"
-#include "MyI2C.h"
-#include "MPU6050_Reg.h"
 #include "OLED.h"
 #include "pwm.h"
 #include "PPM.h"

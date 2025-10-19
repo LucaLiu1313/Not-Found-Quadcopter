@@ -88,7 +88,7 @@ erwork --depend=.\objects\myscratterload.d -o.\objects\myscratterload.o -I.\RTE
 \_Target_1 -IC:\Keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\S
 T\STM32F4xx\Include -IC:\Keil5\ARM\CMSIS\Include --predefine="__UVISION_VERSION
  SETA 524" --predefine="STM32F401xE SETA 1" --list=.\listings\myscratterload.ls
-t ..\CMSIS\myScratterLoad.s
+t ..\uCOS_Ports\myScratterLoad.s
 
 
 
@@ -99,7 +99,7 @@ Relocatable symbols
 
 Symbol: .text
    Definitions
-      At line 1 in file ..\CMSIS\myScratterLoad.s
+      At line 1 in file ..\uCOS_Ports\myScratterLoad.s
    Uses
       None
 Comment: .text unused
@@ -107,25 +107,25 @@ CleanBss 00000016
 
 Symbol: CleanBss
    Definitions
-      At line 24 in file ..\CMSIS\myScratterLoad.s
+      At line 24 in file ..\uCOS_Ports\myScratterLoad.s
    Uses
-      At line 29 in file ..\CMSIS\myScratterLoad.s
+      At line 29 in file ..\uCOS_Ports\myScratterLoad.s
 Comment: CleanBss used once
 CopyData 00000006
 
 Symbol: CopyData
    Definitions
-      At line 14 in file ..\CMSIS\myScratterLoad.s
+      At line 14 in file ..\uCOS_Ports\myScratterLoad.s
    Uses
-      At line 19 in file ..\CMSIS\myScratterLoad.s
+      At line 19 in file ..\uCOS_Ports\myScratterLoad.s
 Comment: CopyData used once
 myScatterLoad 00000000
 
 Symbol: myScatterLoad
    Definitions
-      At line 2 in file ..\CMSIS\myScratterLoad.s
+      At line 2 in file ..\uCOS_Ports\myScratterLoad.s
    Uses
-      At line 3 in file ..\CMSIS\myScratterLoad.s
+      At line 3 in file ..\uCOS_Ports\myScratterLoad.s
 Comment: myScatterLoad used once
 4 symbols
 
@@ -138,41 +138,41 @@ Image$$RW_IRAM1$$Base 00000000
 
 Symbol: Image$$RW_IRAM1$$Base
    Definitions
-      At line 4 in file ..\CMSIS\myScratterLoad.s
+      At line 4 in file ..\uCOS_Ports\myScratterLoad.s
    Uses
-      At line 12 in file ..\CMSIS\myScratterLoad.s
+      At line 12 in file ..\uCOS_Ports\myScratterLoad.s
 Comment: Image$$RW_IRAM1$$Base used once
 Image$$RW_IRAM1$$Length 00000000
 
 Symbol: Image$$RW_IRAM1$$Length
    Definitions
-      At line 5 in file ..\CMSIS\myScratterLoad.s
+      At line 5 in file ..\uCOS_Ports\myScratterLoad.s
    Uses
-      At line 13 in file ..\CMSIS\myScratterLoad.s
+      At line 13 in file ..\uCOS_Ports\myScratterLoad.s
 Comment: Image$$RW_IRAM1$$Length used once
 Image$$RW_IRAM1$$ZI$$Base 00000000
 
 Symbol: Image$$RW_IRAM1$$ZI$$Base
    Definitions
-      At line 7 in file ..\CMSIS\myScratterLoad.s
+      At line 7 in file ..\uCOS_Ports\myScratterLoad.s
    Uses
-      At line 22 in file ..\CMSIS\myScratterLoad.s
+      At line 22 in file ..\uCOS_Ports\myScratterLoad.s
 Comment: Image$$RW_IRAM1$$ZI$$Base used once
 Image$$RW_IRAM1$$ZI$$Length 00000000
 
 Symbol: Image$$RW_IRAM1$$ZI$$Length
    Definitions
-      At line 8 in file ..\CMSIS\myScratterLoad.s
+      At line 8 in file ..\uCOS_Ports\myScratterLoad.s
    Uses
-      At line 23 in file ..\CMSIS\myScratterLoad.s
+      At line 23 in file ..\uCOS_Ports\myScratterLoad.s
 Comment: Image$$RW_IRAM1$$ZI$$Length used once
 Load$$RW_IRAM1$$Base 00000000
 
 Symbol: Load$$RW_IRAM1$$Base
    Definitions
-      At line 6 in file ..\CMSIS\myScratterLoad.s
+      At line 6 in file ..\uCOS_Ports\myScratterLoad.s
    Uses
-      At line 11 in file ..\CMSIS\myScratterLoad.s
+      At line 11 in file ..\uCOS_Ports\myScratterLoad.s
 Comment: Load$$RW_IRAM1$$Base used once
 5 symbols
 344 symbols in table

@@ -48,8 +48,8 @@ void BusFault_Handler(void);
 void UsageFault_Handler(void);
 void SVC_Handler(void);
 void DebugMon_Handler(void);
-//void PendSV_Handler(void);
-//void SysTick_Handler(void);
+//void PendSV_Handler(void);	//定义在os_cpu_a.asm
+//void SysTick_Handler(void);	//定义在os_cpu_c.c
 
 #ifdef __cplusplus
 }

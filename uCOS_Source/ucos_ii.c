@@ -27,6 +27,7 @@
 
 
 #define  OS_MASTER_FILE                       /* Prevent the following files from including includes.h */
+#include <os_dbg_r.c>
 #include <os_core.c>
 #include <os_flag.c>
 #include <os_mbox.c>

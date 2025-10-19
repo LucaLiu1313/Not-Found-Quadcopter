@@ -336,7 +336,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\CMSIS;..\CMSIS\include;..\Library\inc;..\User;..\Hardware;..\Library\src;..\include;..\ports;..\core;..\Init</IncludePath>
+              <IncludePath>..\CMSIS\core\include;..\CMSIS\device;..\Library\inc;..\Library\src;..\Hardware;..\HW_Init;..\Include;..\User;..\IMU;..\uCOS_Ports;..\uCOS_Cfg;..\uCOS_Source</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -378,52 +378,27 @@
       </TargetOption>
       <Groups>
         <Group>
-          <GroupName>CMSIS</GroupName>
+          <GroupName>CMSIS/device</GroupName>
           <Files>
             <File>
               <FileName>startup_stm32f40_41xxx.s</FileName>
               <FileType>2</FileType>
-              <FilePath>..\CMSIS\startup_stm32f40_41xxx.s</FilePath>
-            </File>
-            <File>
-              <FileName>system_stm32f4xx.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\CMSIS\system_stm32f4xx.c</FilePath>
+              <FilePath>..\CMSIS\device\startup_stm32f40_41xxx.s</FilePath>
             </File>
             <File>
               <FileName>stm32f4xx.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\CMSIS\stm32f4xx.h</FilePath>
+              <FilePath>..\CMSIS\device\stm32f4xx.h</FilePath>
+            </File>
+            <File>
+              <FileName>system_stm32f4xx.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\CMSIS\device\system_stm32f4xx.c</FilePath>
             </File>
             <File>
               <FileName>system_stm32f4xx.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\CMSIS\system_stm32f4xx.h</FilePath>
-            </File>
-            <File>
-              <FileName>core_cmFunc.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\CMSIS\include\core_cmFunc.h</FilePath>
-            </File>
-            <File>
-              <FileName>core_cmInstr.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\CMSIS\include\core_cmInstr.h</FilePath>
-            </File>
-            <File>
-              <FileName>core_cmSimd.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\CMSIS\include\core_cmSimd.h</FilePath>
-            </File>
-            <File>
-              <FileName>core_cm4.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\CMSIS\include\core_cm4.h</FilePath>
-            </File>
-            <File>
-              <FileName>myScratterLoad.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\CMSIS\myScratterLoad.s</FilePath>
+              <FilePath>..\CMSIS\device\system_stm32f4xx.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -818,257 +793,17 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>include</GroupName>
-          <Files>
-            <File>
-              <FileName>stm32.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\include\stm32.h</FilePath>
-            </File>
-            <File>
-              <FileName>hardware.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\include\hardware.h</FilePath>
-            </File>
-            <File>
-              <FileName>OS.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\include\OS.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>core</GroupName>
-          <Files>
-            <File>
-              <FileName>os.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\core\os.h</FilePath>
-            </File>
-            <File>
-              <FileName>os_dbg_r.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\core\os_dbg_r.c</FilePath>
-            </File>
-            <File>
-              <FileName>os_flag.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\core\os_flag.c</FilePath>
-            </File>
-            <File>
-              <FileName>os_core.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\core\os_core.c</FilePath>
-            </File>
-            <File>
-              <FileName>os_mbox.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\core\os_mbox.c</FilePath>
-            </File>
-            <File>
-              <FileName>os_mem.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\core\os_mem.c</FilePath>
-            </File>
-            <File>
-              <FileName>os_mutex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\core\os_mutex.c</FilePath>
-            </File>
-            <File>
-              <FileName>os_q.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\core\os_q.c</FilePath>
-            </File>
-            <File>
-              <FileName>os_sem.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\core\os_sem.c</FilePath>
-            </File>
-            <File>
-              <FileName>os_task.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\core\os_task.c</FilePath>
-            </File>
-            <File>
-              <FileName>os_time.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\core\os_time.c</FilePath>
-            </File>
-            <File>
-              <FileName>os_tmr.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\core\os_tmr.c</FilePath>
-            </File>
-            <File>
-              <FileName>os_trace.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\core\os_trace.h</FilePath>
-            </File>
-            <File>
-              <FileName>ucos_ii.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\core\ucos_ii.c</FilePath>
-              <FileOption>
-                <CommonProperty>
-                  <UseCPPCompiler>2</UseCPPCompiler>
-                  <RVCTCodeConst>0</RVCTCodeConst>
-                  <RVCTZI>0</RVCTZI>
-                  <RVCTOtherData>0</RVCTOtherData>
-                  <ModuleSelection>0</ModuleSelection>
-                  <IncludeInBuild>0</IncludeInBuild>
-                  <AlwaysBuild>0</AlwaysBuild>
-                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
-                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
-                  <PublicsOnly>2</PublicsOnly>
-                  <StopOnExitCode>11</StopOnExitCode>
-                  <CustomArgument></CustomArgument>
-                  <IncludeLibraryModules></IncludeLibraryModules>
-                  <ComprImg>1</ComprImg>
-                </CommonProperty>
-                <FileArmAds>
-                  <Cads>
-                    <interw>2</interw>
-                    <Optim>0</Optim>
-                    <oTime>2</oTime>
-                    <SplitLS>2</SplitLS>
-                    <OneElfS>2</OneElfS>
-                    <Strict>2</Strict>
-                    <EnumInt>2</EnumInt>
-                    <PlainCh>2</PlainCh>
-                    <Ropi>2</Ropi>
-                    <Rwpi>2</Rwpi>
-                    <wLevel>0</wLevel>
-                    <uThumb>2</uThumb>
-                    <uSurpInc>2</uSurpInc>
-                    <uC99>2</uC99>
-                    <useXO>2</useXO>
-                    <v6Lang>0</v6Lang>
-                    <v6LangP>0</v6LangP>
-                    <vShortEn>2</vShortEn>
-                    <vShortWch>2</vShortWch>
-                    <v6Lto>2</v6Lto>
-                    <v6WtE>2</v6WtE>
-                    <v6Rtti>2</v6Rtti>
-                    <VariousControls>
-                      <MiscControls></MiscControls>
-                      <Define></Define>
-                      <Undefine></Undefine>
-                      <IncludePath></IncludePath>
-                    </VariousControls>
-                  </Cads>
-                </FileArmAds>
-              </FileOption>
-            </File>
-            <File>
-              <FileName>ucos_ii.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\core\ucos_ii.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>port</GroupName>
-          <Files>
-            <File>
-              <FileName>app_cfg.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\ports\app_cfg.h</FilePath>
-            </File>
-            <File>
-              <FileName>app_hooks.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\ports\app_hooks.c</FilePath>
-              <FileOption>
-                <CommonProperty>
-                  <UseCPPCompiler>2</UseCPPCompiler>
-                  <RVCTCodeConst>0</RVCTCodeConst>
-                  <RVCTZI>0</RVCTZI>
-                  <RVCTOtherData>0</RVCTOtherData>
-                  <ModuleSelection>0</ModuleSelection>
-                  <IncludeInBuild>0</IncludeInBuild>
-                  <AlwaysBuild>0</AlwaysBuild>
-                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
-                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
-                  <PublicsOnly>2</PublicsOnly>
-                  <StopOnExitCode>11</StopOnExitCode>
-                  <CustomArgument></CustomArgument>
-                  <IncludeLibraryModules></IncludeLibraryModules>
-                  <ComprImg>1</ComprImg>
-                </CommonProperty>
-                <FileArmAds>
-                  <Cads>
-                    <interw>2</interw>
-                    <Optim>0</Optim>
-                    <oTime>2</oTime>
-                    <SplitLS>2</SplitLS>
-                    <OneElfS>2</OneElfS>
-                    <Strict>2</Strict>
-                    <EnumInt>2</EnumInt>
-                    <PlainCh>2</PlainCh>
-                    <Ropi>2</Ropi>
-                    <Rwpi>2</Rwpi>
-                    <wLevel>0</wLevel>
-                    <uThumb>2</uThumb>
-                    <uSurpInc>2</uSurpInc>
-                    <uC99>2</uC99>
-                    <useXO>2</useXO>
-                    <v6Lang>0</v6Lang>
-                    <v6LangP>0</v6LangP>
-                    <vShortEn>2</vShortEn>
-                    <vShortWch>2</vShortWch>
-                    <v6Lto>2</v6Lto>
-                    <v6WtE>2</v6WtE>
-                    <v6Rtti>2</v6Rtti>
-                    <VariousControls>
-                      <MiscControls></MiscControls>
-                      <Define></Define>
-                      <Undefine></Undefine>
-                      <IncludePath></IncludePath>
-                    </VariousControls>
-                  </Cads>
-                </FileArmAds>
-              </FileOption>
-            </File>
-            <File>
-              <FileName>myHook.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\ports\myHook.c</FilePath>
-            </File>
-            <File>
-              <FileName>os_cfg.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\ports\os_cfg.h</FilePath>
-            </File>
-            <File>
-              <FileName>os_cpu.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\ports\os_cpu.h</FilePath>
-            </File>
-            <File>
-              <FileName>os_cpu_a.asm</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\ports\os_cpu_a.asm</FilePath>
-            </File>
-            <File>
-              <FileName>os_cpu_c.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\ports\os_cpu_c.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Init</GroupName>
+          <GroupName>HW_Init</GroupName>
           <Files>
             <File>
               <FileName>hardwareInit.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Init\hardwareInit.c</FilePath>
+              <FilePath>..\HW_Init\hardwareInit.c</FilePath>
             </File>
             <File>
               <FileName>hardwareInit.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\Init\hardwareInit.h</FilePath>
+              <FilePath>..\HW_Init\hardwareInit.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -1131,6 +866,11 @@
               <FilePath>..\Hardware\HMC5883L.h</FilePath>
             </File>
             <File>
+              <FileName>HMC5883L_Reg.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Hardware\HMC5883L_Reg.h</FilePath>
+            </File>
+            <File>
               <FileName>OLED.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Hardware\OLED.c</FilePath>
@@ -1144,16 +884,6 @@
               <FileName>OLED_Font.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\Hardware\OLED_Font.h</FilePath>
-            </File>
-            <File>
-              <FileName>motor.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Hardware\motor.c</FilePath>
-            </File>
-            <File>
-              <FileName>motor.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Hardware\motor.h</FilePath>
             </File>
             <File>
               <FileName>pwm.c</FileName>
@@ -1175,10 +905,25 @@
               <FileType>5</FileType>
               <FilePath>..\Hardware\PPM.h</FilePath>
             </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>include</GroupName>
+          <Files>
             <File>
-              <FileName>HMC5883L_Reg.h</FileName>
+              <FileName>stm32.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\Hardware\HMC5883L_Reg.h</FilePath>
+              <FilePath>..\include\stm32.h</FilePath>
+            </File>
+            <File>
+              <FileName>hardware.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\include\hardware.h</FilePath>
+            </File>
+            <File>
+              <FileName>OS.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\include\OS.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -1219,6 +964,319 @@
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\User\main.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>IMU</GroupName>
+          <Files>
+            <File>
+              <FileName>imu.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\IMU\imu.c</FilePath>
+            </File>
+            <File>
+              <FileName>imu.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\IMU\imu.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>uCOS_Source</GroupName>
+          <GroupOption>
+            <CommonProperty>
+              <UseCPPCompiler>0</UseCPPCompiler>
+              <RVCTCodeConst>0</RVCTCodeConst>
+              <RVCTZI>0</RVCTZI>
+              <RVCTOtherData>0</RVCTOtherData>
+              <ModuleSelection>0</ModuleSelection>
+              <IncludeInBuild>0</IncludeInBuild>
+              <AlwaysBuild>0</AlwaysBuild>
+              <GenerateAssemblyFile>2</GenerateAssemblyFile>
+              <AssembleAssemblyFile>2</AssembleAssemblyFile>
+              <PublicsOnly>2</PublicsOnly>
+              <StopOnExitCode>11</StopOnExitCode>
+              <CustomArgument></CustomArgument>
+              <IncludeLibraryModules></IncludeLibraryModules>
+              <ComprImg>1</ComprImg>
+            </CommonProperty>
+            <GroupArmAds>
+              <Cads>
+                <interw>2</interw>
+                <Optim>0</Optim>
+                <oTime>2</oTime>
+                <SplitLS>2</SplitLS>
+                <OneElfS>2</OneElfS>
+                <Strict>2</Strict>
+                <EnumInt>2</EnumInt>
+                <PlainCh>2</PlainCh>
+                <Ropi>2</Ropi>
+                <Rwpi>2</Rwpi>
+                <wLevel>0</wLevel>
+                <uThumb>2</uThumb>
+                <uSurpInc>2</uSurpInc>
+                <uC99>2</uC99>
+                <useXO>2</useXO>
+                <v6Lang>0</v6Lang>
+                <v6LangP>0</v6LangP>
+                <vShortEn>2</vShortEn>
+                <vShortWch>2</vShortWch>
+                <v6Lto>2</v6Lto>
+                <v6WtE>2</v6WtE>
+                <v6Rtti>2</v6Rtti>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath></IncludePath>
+                </VariousControls>
+              </Cads>
+              <Aads>
+                <interw>2</interw>
+                <Ropi>2</Ropi>
+                <Rwpi>2</Rwpi>
+                <thumb>2</thumb>
+                <SplitLS>2</SplitLS>
+                <SwStkChk>2</SwStkChk>
+                <NoWarn>2</NoWarn>
+                <uSurpInc>2</uSurpInc>
+                <useXO>2</useXO>
+                <uClangAs>2</uClangAs>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath></IncludePath>
+                </VariousControls>
+              </Aads>
+            </GroupArmAds>
+          </GroupOption>
+          <Files>
+            <File>
+              <FileName>os.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\uCOS_Source\os.h</FilePath>
+            </File>
+            <File>
+              <FileName>os_core.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\uCOS_Source\os_core.c</FilePath>
+            </File>
+            <File>
+              <FileName>os_dbg_r.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\uCOS_Source\os_dbg_r.c</FilePath>
+            </File>
+            <File>
+              <FileName>os_flag.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\uCOS_Source\os_flag.c</FilePath>
+            </File>
+            <File>
+              <FileName>os_mbox.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\uCOS_Source\os_mbox.c</FilePath>
+            </File>
+            <File>
+              <FileName>os_mem.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\uCOS_Source\os_mem.c</FilePath>
+            </File>
+            <File>
+              <FileName>os_mutex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\uCOS_Source\os_mutex.c</FilePath>
+            </File>
+            <File>
+              <FileName>os_q.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\uCOS_Source\os_q.c</FilePath>
+            </File>
+            <File>
+              <FileName>os_sem.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\uCOS_Source\os_sem.c</FilePath>
+            </File>
+            <File>
+              <FileName>os_task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\uCOS_Source\os_task.c</FilePath>
+            </File>
+            <File>
+              <FileName>os_time.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\uCOS_Source\os_time.c</FilePath>
+            </File>
+            <File>
+              <FileName>os_tmr.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\uCOS_Source\os_tmr.c</FilePath>
+            </File>
+            <File>
+              <FileName>os_trace.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\uCOS_Source\os_trace.h</FilePath>
+            </File>
+            <File>
+              <FileName>ucos_ii.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\uCOS_Source\ucos_ii.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>1</IncludeInBuild>
+                  <AlwaysBuild>1</AlwaysBuild>
+                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define></Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
+            </File>
+            <File>
+              <FileName>ucos_ii.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\uCOS_Source\ucos_ii.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>uCOS_Ports</GroupName>
+          <Files>
+            <File>
+              <FileName>myScratterLoad.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>..\uCOS_Ports\myScratterLoad.s</FilePath>
+            </File>
+            <File>
+              <FileName>os_cpu.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\uCOS_Ports\os_cpu.h</FilePath>
+            </File>
+            <File>
+              <FileName>os_cpu_a.asm</FileName>
+              <FileType>2</FileType>
+              <FilePath>..\uCOS_Ports\os_cpu_a.asm</FilePath>
+            </File>
+            <File>
+              <FileName>os_cpu_c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\uCOS_Ports\os_cpu_c.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>uCOS_Cfg</GroupName>
+          <Files>
+            <File>
+              <FileName>app_cfg.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\uCOS_Cfg\app_cfg.h</FilePath>
+            </File>
+            <File>
+              <FileName>app_hooks.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\uCOS_Cfg\app_hooks.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>0</IncludeInBuild>
+                  <AlwaysBuild>0</AlwaysBuild>
+                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define></Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
+            </File>
+            <File>
+              <FileName>myHook.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\uCOS_Cfg\myHook.c</FilePath>
+            </File>
+            <File>
+              <FileName>os_cfg.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\uCOS_Cfg\os_cfg.h</FilePath>
             </File>
           </Files>
         </Group>

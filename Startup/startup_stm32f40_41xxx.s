@@ -184,7 +184,6 @@ Reset_Handler    PROC
                  BLX     R0
                  LDR     R0, =myScatterLoad
                  BLX     R0
-				 
                   
                  BL      main
 				 B       .

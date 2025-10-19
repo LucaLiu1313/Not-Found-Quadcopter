@@ -96,6 +96,71 @@ void Serial_SendNumber(uint32_t Number,uint8_t Length)
 	}
 }
 
+// 发送浮点数函数,参数分别是数字、整数部分长度、小数部分长度
+void Serial_SendFloat(float number, uint8_t integerLength, uint8_t decimalLength)
+{
+    uint32_t integerPart, decimalPart;
+    
+    // 处理负数
+    if(number < 0)
+    {
+        Serial_SendByte('-');  // 发送负号
+        number = -number;      // 转为正数处理
+    }
+    
+    // 提取整数部分和小数部分
+    integerPart = (uint32_t)number;                           // 整数部分
+    decimalPart = (uint32_t)((number - integerPart) * Serial_Pow(10, decimalLength));  // 小数部分
+    
+    // 发送整数部分
+    Serial_SendNumber(integerPart, integerLength);
+    
+    // 发送小数点
+    Serial_SendByte('.');
+    
+    // 发送小数部分
+    Serial_SendNumber(decimalPart, decimalLength);
+}
+
+//自动识别整数位数
+void Serial_SendFloatSimple(float number, uint8_t decimalLength)
+{
+    int32_t integerPart;
+    uint32_t decimalPart;
+    
+    // 处理负数
+    if(number < 0)
+    {
+        Serial_SendByte('-');
+        number = -number;
+    }
+    
+    // 提取整数和小数部分
+    integerPart = (int32_t)number;
+    decimalPart = (uint32_t)((number - integerPart) * Serial_Pow(10, decimalLength));
+    
+    // 发送整数部分（不补零）
+    if(integerPart == 0)
+    {
+        Serial_SendByte('0');
+    }
+    else
+    {
+        // 计算整数部分实际位数并发送
+        uint8_t length = 0;
+        int32_t temp = integerPart;
+        while(temp > 0)
+        {
+            length++;
+            temp /= 10;
+        }
+        Serial_SendNumber(integerPart, length);
+    }
+    
+    // 发送小数点和小数部分
+    Serial_SendByte('.');
+    Serial_SendNumber(decimalPart, decimalLength);
+}
 
 uint8_t Serial_GetRxFlag(void)
 {

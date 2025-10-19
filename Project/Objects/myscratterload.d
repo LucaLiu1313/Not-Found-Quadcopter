@@ -1,1 +1,1 @@
-.\objects\myscratterload.o: ..\CMSIS\myScratterLoad.s
+.\objects\myscratterload.o: ..\uCOS_Ports\myScratterLoad.s

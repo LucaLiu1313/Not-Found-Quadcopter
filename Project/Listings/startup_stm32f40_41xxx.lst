@@ -877,7 +877,7 @@ erwork --depend=.\objects\startup_stm32f40_41xxx.d -o.\objects\startup_stm32f40
 _41xxx.o -I.\RTE\_Target_1 -IC:\Keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Driver
 s\CMSIS\Device\ST\STM32F4xx\Include -IC:\Keil5\ARM\CMSIS\Include --predefine="_
 _UVISION_VERSION SETA 524" --predefine="STM32F401xE SETA 1" --list=.\listings\s
-tartup_stm32f40_41xxx.lst ..\CMSIS\startup_stm32f40_41xxx.s
+tartup_stm32f40_41xxx.lst ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 
 
@@ -888,7 +888,7 @@ STACK 00000000
 
 Symbol: STACK
    Definitions
-      At line 43 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 43 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
       None
 Comment: STACK unused
@@ -896,18 +896,18 @@ Stack_Mem 00000000
 
 Symbol: Stack_Mem
    Definitions
-      At line 44 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 44 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 428 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 430 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 428 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 430 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 __initial_sp 00000400
 
 Symbol: __initial_sp
    Definitions
-      At line 45 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 45 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 69 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 69 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 Comment: __initial_sp used once
 3 symbols
 
@@ -920,7 +920,7 @@ HEAP 00000000
 
 Symbol: HEAP
    Definitions
-      At line 54 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 54 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
       None
 Comment: HEAP unused
@@ -928,16 +928,16 @@ Heap_Mem 00000000
 
 Symbol: Heap_Mem
    Definitions
-      At line 56 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 56 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 427 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 429 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 427 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 429 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 __heap_base 00000000
 
 Symbol: __heap_base
    Definitions
-      At line 55 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 55 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
       None
 Comment: __heap_base unused
@@ -945,7 +945,7 @@ __heap_limit 00000200
 
 Symbol: __heap_limit
    Definitions
-      At line 57 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 57 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
       None
 Comment: __heap_limit unused
@@ -960,7 +960,7 @@ RESET 00000000
 
 Symbol: RESET
    Definitions
-      At line 64 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 64 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
       None
 Comment: RESET unused
@@ -968,19 +968,19 @@ __Vectors 00000000
 
 Symbol: __Vectors
    Definitions
-      At line 69 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 69 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 65 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 172 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 65 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 172 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 __Vectors_End 00000188
 
 Symbol: __Vectors_End
    Definitions
-      At line 170 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 170 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 66 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 172 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 66 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 172 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 3 symbols
 
@@ -993,7 +993,7 @@ Relocatable symbols
 
 Symbol: .text
    Definitions
-      At line 174 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 174 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
       None
 Comment: .text unused
@@ -1001,52 +1001,52 @@ ADC_IRQHandler 00000020
 
 Symbol: ADC_IRQHandler
    Definitions
-      At line 340 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 340 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 105 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 257 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 105 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 257 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 BusFault_Handler 00000014
 
 Symbol: BusFault_Handler
    Definitions
-      At line 210 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 210 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 74 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 211 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 74 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 211 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 CAN1_RX0_IRQHandler 00000020
 
 Symbol: CAN1_RX0_IRQHandler
    Definitions
-      At line 342 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 342 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 107 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 259 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 107 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 259 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 CAN1_RX1_IRQHandler 00000020
 
 Symbol: CAN1_RX1_IRQHandler
    Definitions
-      At line 343 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 343 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 108 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 260 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 108 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 260 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 CAN1_SCE_IRQHandler 00000020
 
 Symbol: CAN1_SCE_IRQHandler
    Definitions
-      At line 344 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 344 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 109 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 261 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 109 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 261 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 CAN1_TX_IRQHandler 00000020
 
 Symbol: CAN1_TX_IRQHandler
    Definitions
-      At line 341 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 341 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
 
 
@@ -1054,62 +1054,62 @@ Symbol: CAN1_TX_IRQHandler
 ARM Macro Assembler    Page 2 Alphabetic symbol ordering
 Relocatable symbols
 
-      At line 106 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 258 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 106 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 258 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 CAN2_RX0_IRQHandler 00000020
 
 Symbol: CAN2_RX0_IRQHandler
    Definitions
-      At line 386 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 386 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 151 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 303 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 151 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 303 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 CAN2_RX1_IRQHandler 00000020
 
 Symbol: CAN2_RX1_IRQHandler
    Definitions
-      At line 387 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 387 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 152 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 304 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 152 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 304 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 CAN2_SCE_IRQHandler 00000020
 
 Symbol: CAN2_SCE_IRQHandler
    Definitions
-      At line 388 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 388 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 153 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 305 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 153 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 305 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 CAN2_TX_IRQHandler 00000020
 
 Symbol: CAN2_TX_IRQHandler
    Definitions
-      At line 385 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 385 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 150 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 302 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 150 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 302 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 CRYP_IRQHandler 00000020
 
 Symbol: CRYP_IRQHandler
    Definitions
-      At line 401 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 401 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 166 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 318 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 166 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 318 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 DCMI_IRQHandler 00000020
 
 Symbol: DCMI_IRQHandler
    Definitions
-      At line 400 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 400 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 165 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 317 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 165 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 317 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 DMA1_Stream0_IRQHandler 00000020
 
@@ -1121,124 +1121,124 @@ Relocatable symbols
 
 Symbol: DMA1_Stream0_IRQHandler
    Definitions
-      At line 333 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 333 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 98 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 250 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 98 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 250 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 DMA1_Stream1_IRQHandler 00000020
 
 Symbol: DMA1_Stream1_IRQHandler
    Definitions
-      At line 334 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 334 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 99 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 251 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 99 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 251 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 DMA1_Stream2_IRQHandler 00000020
 
 Symbol: DMA1_Stream2_IRQHandler
    Definitions
-      At line 335 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 335 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 100 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 252 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 100 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 252 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 DMA1_Stream3_IRQHandler 00000020
 
 Symbol: DMA1_Stream3_IRQHandler
    Definitions
-      At line 336 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 336 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 101 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 253 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 101 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 253 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 DMA1_Stream4_IRQHandler 00000020
 
 Symbol: DMA1_Stream4_IRQHandler
    Definitions
-      At line 337 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 337 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 102 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 254 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 102 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 254 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 DMA1_Stream5_IRQHandler 00000020
 
 Symbol: DMA1_Stream5_IRQHandler
    Definitions
-      At line 338 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 338 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 103 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 255 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 103 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 255 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 DMA1_Stream6_IRQHandler 00000020
 
 Symbol: DMA1_Stream6_IRQHandler
    Definitions
-      At line 339 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 339 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 104 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 104 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 
 
 ARM Macro Assembler    Page 4 Alphabetic symbol ordering
 Relocatable symbols
 
-      At line 256 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 256 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 DMA1_Stream7_IRQHandler 00000020
 
 Symbol: DMA1_Stream7_IRQHandler
    Definitions
-      At line 369 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 369 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 134 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 286 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 134 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 286 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 DMA2_Stream0_IRQHandler 00000020
 
 Symbol: DMA2_Stream0_IRQHandler
    Definitions
-      At line 378 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 378 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 143 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 295 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 143 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 295 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 DMA2_Stream1_IRQHandler 00000020
 
 Symbol: DMA2_Stream1_IRQHandler
    Definitions
-      At line 379 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 379 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 144 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 296 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 144 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 296 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 DMA2_Stream2_IRQHandler 00000020
 
 Symbol: DMA2_Stream2_IRQHandler
    Definitions
-      At line 380 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 380 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 145 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 297 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 145 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 297 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 DMA2_Stream3_IRQHandler 00000020
 
 Symbol: DMA2_Stream3_IRQHandler
    Definitions
-      At line 381 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 381 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 146 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 298 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 146 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 298 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 DMA2_Stream4_IRQHandler 00000020
 
 Symbol: DMA2_Stream4_IRQHandler
    Definitions
-      At line 382 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 382 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 147 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 299 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 147 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 299 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 DMA2_Stream5_IRQHandler 00000020
 
@@ -1250,43 +1250,43 @@ ARM Macro Assembler    Page 5 Alphabetic symbol ordering
 Relocatable symbols
 
    Definitions
-      At line 390 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 390 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 155 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 307 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 155 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 307 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 DMA2_Stream6_IRQHandler 00000020
 
 Symbol: DMA2_Stream6_IRQHandler
    Definitions
-      At line 391 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 391 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 156 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 308 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 156 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 308 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 DMA2_Stream7_IRQHandler 00000020
 
 Symbol: DMA2_Stream7_IRQHandler
    Definitions
-      At line 392 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 392 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 157 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 309 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 157 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 309 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 DebugMon_Handler 0000001A
 
 Symbol: DebugMon_Handler
    Definitions
-      At line 224 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 224 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 81 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 225 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 81 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 225 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 Default_Handler 00000020
 
 Symbol: Default_Handler
    Definitions
-      At line 237 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 237 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
       None
 Comment: Default_Handler unused
@@ -1294,19 +1294,19 @@ ETH_IRQHandler 00000020
 
 Symbol: ETH_IRQHandler
    Definitions
-      At line 383 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 383 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 148 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 300 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 148 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 300 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 ETH_WKUP_IRQHandler 00000020
 
 Symbol: ETH_WKUP_IRQHandler
    Definitions
-      At line 384 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 384 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 149 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 301 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 149 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 301 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 
 
@@ -1318,61 +1318,61 @@ EXTI0_IRQHandler 00000020
 
 Symbol: EXTI0_IRQHandler
    Definitions
-      At line 328 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 328 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 93 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 245 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 93 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 245 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 EXTI15_10_IRQHandler 00000020
 
 Symbol: EXTI15_10_IRQHandler
    Definitions
-      At line 362 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 362 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 127 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 279 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 127 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 279 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 EXTI1_IRQHandler 00000020
 
 Symbol: EXTI1_IRQHandler
    Definitions
-      At line 329 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 329 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 94 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 246 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 94 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 246 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 EXTI2_IRQHandler 00000020
 
 Symbol: EXTI2_IRQHandler
    Definitions
-      At line 330 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 330 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 95 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 247 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 95 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 247 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 EXTI3_IRQHandler 00000020
 
 Symbol: EXTI3_IRQHandler
    Definitions
-      At line 331 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 331 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 96 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 248 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 96 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 248 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 EXTI4_IRQHandler 00000020
 
 Symbol: EXTI4_IRQHandler
    Definitions
-      At line 332 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 332 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 97 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 249 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 97 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 249 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 EXTI9_5_IRQHandler 00000020
 
 Symbol: EXTI9_5_IRQHandler
    Definitions
-      At line 345 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 345 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 
 
@@ -1380,62 +1380,62 @@ ARM Macro Assembler    Page 7 Alphabetic symbol ordering
 Relocatable symbols
 
    Uses
-      At line 110 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 262 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 110 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 262 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 FLASH_IRQHandler 00000020
 
 Symbol: FLASH_IRQHandler
    Definitions
-      At line 326 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 326 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 91 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 243 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 91 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 243 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 FPU_IRQHandler 00000020
 
 Symbol: FPU_IRQHandler
    Definitions
-      At line 403 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 403 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 168 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 320 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 168 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 320 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 FSMC_IRQHandler 00000020
 
 Symbol: FSMC_IRQHandler
    Definitions
-      At line 370 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 370 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 135 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 287 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 135 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 287 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 HASH_RNG_IRQHandler 00000020
 
 Symbol: HASH_RNG_IRQHandler
    Definitions
-      At line 402 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 402 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 167 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 319 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 167 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 319 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 HardFault_Handler 00000010
 
 Symbol: HardFault_Handler
    Definitions
-      At line 200 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 200 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 72 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 201 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 72 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 201 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 I2C1_ER_IRQHandler 00000020
 
 Symbol: I2C1_ER_IRQHandler
    Definitions
-      At line 354 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 354 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 119 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 271 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 119 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 271 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 I2C1_EV_IRQHandler 00000020
 
@@ -1447,61 +1447,61 @@ Relocatable symbols
 
 Symbol: I2C1_EV_IRQHandler
    Definitions
-      At line 353 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 353 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 118 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 270 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 118 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 270 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 I2C2_ER_IRQHandler 00000020
 
 Symbol: I2C2_ER_IRQHandler
    Definitions
-      At line 356 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 356 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 121 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 273 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 121 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 273 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 I2C2_EV_IRQHandler 00000020
 
 Symbol: I2C2_EV_IRQHandler
    Definitions
-      At line 355 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 355 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 120 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 272 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 120 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 272 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 I2C3_ER_IRQHandler 00000020
 
 Symbol: I2C3_ER_IRQHandler
    Definitions
-      At line 395 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 395 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 160 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 312 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 160 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 312 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 I2C3_EV_IRQHandler 00000020
 
 Symbol: I2C3_EV_IRQHandler
    Definitions
-      At line 394 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 394 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 159 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 311 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 159 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 311 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 MemManage_Handler 00000012
 
 Symbol: MemManage_Handler
    Definitions
-      At line 205 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 205 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 73 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 206 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 73 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 206 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 NMI_Handler 0000000E
 
 Symbol: NMI_Handler
    Definitions
-      At line 195 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 195 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
 
 
@@ -1509,62 +1509,62 @@ Symbol: NMI_Handler
 ARM Macro Assembler    Page 9 Alphabetic symbol ordering
 Relocatable symbols
 
-      At line 71 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 196 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 71 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 196 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 OTG_FS_IRQHandler 00000020
 
 Symbol: OTG_FS_IRQHandler
    Definitions
-      At line 389 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 389 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 154 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 306 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 154 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 306 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 OTG_FS_WKUP_IRQHandler 00000020
 
 Symbol: OTG_FS_WKUP_IRQHandler
    Definitions
-      At line 364 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 364 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 129 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 281 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 129 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 281 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 OTG_HS_EP1_IN_IRQHandler 00000020
 
 Symbol: OTG_HS_EP1_IN_IRQHandler
    Definitions
-      At line 397 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 397 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 162 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 314 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 162 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 314 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 OTG_HS_EP1_OUT_IRQHandler 00000020
 
 Symbol: OTG_HS_EP1_OUT_IRQHandler
    Definitions
-      At line 396 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 396 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 161 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 313 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 161 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 313 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 OTG_HS_IRQHandler 00000020
 
 Symbol: OTG_HS_IRQHandler
    Definitions
-      At line 399 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 399 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 164 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 316 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 164 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 316 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 OTG_HS_WKUP_IRQHandler 00000020
 
 Symbol: OTG_HS_WKUP_IRQHandler
    Definitions
-      At line 398 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 398 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 163 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 315 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 163 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 315 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 PVD_IRQHandler 00000020
 
@@ -1576,124 +1576,124 @@ Relocatable symbols
 
 Symbol: PVD_IRQHandler
    Definitions
-      At line 323 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 323 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 88 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 240 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 88 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 240 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 PendSV_Handler 0000001C
 
 Symbol: PendSV_Handler
    Definitions
-      At line 228 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 228 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 83 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 229 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 83 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 229 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 RCC_IRQHandler 00000020
 
 Symbol: RCC_IRQHandler
    Definitions
-      At line 327 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 327 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 92 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 244 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 92 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 244 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 RTC_Alarm_IRQHandler 00000020
 
 Symbol: RTC_Alarm_IRQHandler
    Definitions
-      At line 363 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 363 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 128 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 280 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 128 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 280 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 RTC_WKUP_IRQHandler 00000020
 
 Symbol: RTC_WKUP_IRQHandler
    Definitions
-      At line 325 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 325 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 90 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 242 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 90 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 242 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 Reset_Handler 00000000
 
 Symbol: Reset_Handler
    Definitions
-      At line 177 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 177 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 70 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 178 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 70 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 178 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 SDIO_IRQHandler 00000020
 
 Symbol: SDIO_IRQHandler
    Definitions
-      At line 371 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 371 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 136 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 136 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 
 
 ARM Macro Assembler    Page 11 Alphabetic symbol ordering
 Relocatable symbols
 
-      At line 288 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 288 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 SPI1_IRQHandler 00000020
 
 Symbol: SPI1_IRQHandler
    Definitions
-      At line 357 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 357 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 122 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 274 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 122 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 274 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 SPI2_IRQHandler 00000020
 
 Symbol: SPI2_IRQHandler
    Definitions
-      At line 358 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 358 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 123 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 275 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 123 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 275 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 SPI3_IRQHandler 00000020
 
 Symbol: SPI3_IRQHandler
    Definitions
-      At line 373 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 373 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 138 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 290 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 138 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 290 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 SVC_Handler 00000018
 
 Symbol: SVC_Handler
    Definitions
-      At line 219 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 219 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 80 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 220 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 80 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 220 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 SysTick_Handler 0000001E
 
 Symbol: SysTick_Handler
    Definitions
-      At line 232 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 232 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 84 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 233 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 84 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 233 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 TAMP_STAMP_IRQHandler 00000020
 
 Symbol: TAMP_STAMP_IRQHandler
    Definitions
-      At line 324 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 324 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 89 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 241 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 89 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 241 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 TIM1_BRK_TIM9_IRQHandler 00000020
 
@@ -1705,64 +1705,64 @@ ARM Macro Assembler    Page 12 Alphabetic symbol ordering
 Relocatable symbols
 
    Definitions
-      At line 346 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 346 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 111 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 263 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 111 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 263 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 TIM1_CC_IRQHandler 00000020
 
 Symbol: TIM1_CC_IRQHandler
    Definitions
-      At line 349 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 349 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 114 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 266 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 114 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 266 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 TIM1_TRG_COM_TIM11_IRQHandler 00000020
 
 Symbol: TIM1_TRG_COM_TIM11_IRQHandler
    Definitions
-      At line 348 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 348 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 113 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 265 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 113 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 265 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 TIM1_UP_TIM10_IRQHandler 00000020
 
 Symbol: TIM1_UP_TIM10_IRQHandler
    Definitions
-      At line 347 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 347 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 112 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 264 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 112 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 264 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 TIM2_IRQHandler 00000020
 
 Symbol: TIM2_IRQHandler
    Definitions
-      At line 350 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 350 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 115 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 267 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 115 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 267 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 TIM3_IRQHandler 00000020
 
 Symbol: TIM3_IRQHandler
    Definitions
-      At line 351 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 351 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 116 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 268 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 116 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 268 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 TIM4_IRQHandler 00000020
 
 Symbol: TIM4_IRQHandler
    Definitions
-      At line 352 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 352 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 117 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 269 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 117 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 269 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 
 
@@ -1774,55 +1774,55 @@ TIM5_IRQHandler 00000020
 
 Symbol: TIM5_IRQHandler
    Definitions
-      At line 372 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 372 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 137 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 289 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 137 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 289 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 TIM6_DAC_IRQHandler 00000020
 
 Symbol: TIM6_DAC_IRQHandler
    Definitions
-      At line 376 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 376 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 141 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 293 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 141 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 293 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 TIM7_IRQHandler 00000020
 
 Symbol: TIM7_IRQHandler
    Definitions
-      At line 377 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 377 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 142 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 294 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 142 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 294 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 TIM8_BRK_TIM12_IRQHandler 00000020
 
 Symbol: TIM8_BRK_TIM12_IRQHandler
    Definitions
-      At line 365 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 365 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 130 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 282 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 130 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 282 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 TIM8_CC_IRQHandler 00000020
 
 Symbol: TIM8_CC_IRQHandler
    Definitions
-      At line 368 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 368 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 133 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 285 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 133 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 285 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 TIM8_TRG_COM_TIM14_IRQHandler 00000020
 
 Symbol: TIM8_TRG_COM_TIM14_IRQHandler
    Definitions
-      At line 367 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 367 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 132 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 284 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 132 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 284 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 TIM8_UP_TIM13_IRQHandler 00000020
 
@@ -1834,64 +1834,64 @@ Symbol: TIM8_UP_TIM13_IRQHandler
 ARM Macro Assembler    Page 14 Alphabetic symbol ordering
 Relocatable symbols
 
-      At line 366 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 366 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 131 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 283 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 131 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 283 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 UART4_IRQHandler 00000020
 
 Symbol: UART4_IRQHandler
    Definitions
-      At line 374 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 374 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 139 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 291 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 139 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 291 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 UART5_IRQHandler 00000020
 
 Symbol: UART5_IRQHandler
    Definitions
-      At line 375 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 375 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 140 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 292 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 140 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 292 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 USART1_IRQHandler 00000020
 
 Symbol: USART1_IRQHandler
    Definitions
-      At line 359 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 359 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 124 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 276 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 124 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 276 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 USART2_IRQHandler 00000020
 
 Symbol: USART2_IRQHandler
    Definitions
-      At line 360 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 360 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 125 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 277 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 125 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 277 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 USART3_IRQHandler 00000020
 
 Symbol: USART3_IRQHandler
    Definitions
-      At line 361 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 361 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 126 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 278 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 126 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 278 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 USART6_IRQHandler 00000020
 
 Symbol: USART6_IRQHandler
    Definitions
-      At line 393 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 393 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 158 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 310 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 158 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 310 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 
 
@@ -1903,27 +1903,27 @@ UsageFault_Handler 00000016
 
 Symbol: UsageFault_Handler
    Definitions
-      At line 215 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 215 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 75 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 216 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 75 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 216 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 WWDG_IRQHandler 00000020
 
 Symbol: WWDG_IRQHandler
    Definitions
-      At line 322 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 322 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 87 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 239 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 87 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 239 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 __user_initial_stackheap 00000024
 
 Symbol: __user_initial_stackheap
    Definitions
-      At line 425 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 425 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 423 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 423 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 Comment: __user_initial_stackheap used once
 95 symbols
 
@@ -1936,27 +1936,27 @@ Heap_Size 00000200
 
 Symbol: Heap_Size
    Definitions
-      At line 52 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 52 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 56 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 429 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 56 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 429 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 Stack_Size 00000400
 
 Symbol: Stack_Size
    Definitions
-      At line 41 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 41 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 44 in file ..\CMSIS\startup_stm32f40_41xxx.s
-      At line 428 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 44 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
+      At line 428 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 
 __Vectors_Size 00000188
 
 Symbol: __Vectors_Size
    Definitions
-      At line 172 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 172 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 67 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 67 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 Comment: __Vectors_Size used once
 3 symbols
 
@@ -1969,15 +1969,15 @@ SystemInit 00000000
 
 Symbol: SystemInit
    Definitions
-      At line 179 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 179 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 183 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 183 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 Comment: SystemInit used once
 __use_two_region_memory 00000000
 
 Symbol: __use_two_region_memory
    Definitions
-      At line 422 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 422 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
       None
 Comment: __use_two_region_memory unused
@@ -1985,17 +1985,17 @@ main 00000000
 
 Symbol: main
    Definitions
-      At line 181 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 181 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 189 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 189 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 Comment: main used once
 myScatterLoad 00000000
 
 Symbol: myScatterLoad
    Definitions
-      At line 180 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 180 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
    Uses
-      At line 185 in file ..\CMSIS\startup_stm32f40_41xxx.s
+      At line 185 in file ..\CMSIS\device\startup_stm32f40_41xxx.s
 Comment: myScatterLoad used once
 4 symbols
 449 symbols in table
