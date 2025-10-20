@@ -14,4 +14,6 @@ void MPU_get_HMC(void);
 
 void HMC5883L_GetData(int16_t * magn_x_gs,int16_t *magn_y_gs,int16_t *magn_z_gs);
 
+void HMC5883L_GetData1(int16_t * magn_x_gs,int16_t *magn_y_gs,int16_t *magn_z_gs);
+
 #endif

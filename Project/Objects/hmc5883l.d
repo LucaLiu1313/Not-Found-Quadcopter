@@ -1,7 +1,7 @@
 .\objects\hmc5883l.o: ..\Hardware\HMC5883L.c
 .\objects\hmc5883l.o: ..\CMSIS\stm32f4xx.h
 .\objects\hmc5883l.o: ..\CMSIS\include\core_cm4.h
-.\objects\hmc5883l.o: D:\keil\keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\hmc5883l.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\hmc5883l.o: ..\CMSIS\include\core_cmInstr.h
 .\objects\hmc5883l.o: ..\CMSIS\include\core_cmFunc.h
 .\objects\hmc5883l.o: ..\CMSIS\include\core_cmSimd.h

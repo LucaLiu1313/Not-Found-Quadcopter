@@ -42,8 +42,6 @@
 ".\objects\stm32f4xx_tim.o"
 ".\objects\stm32f4xx_usart.o"
 ".\objects\stm32f4xx_wwdg.o"
-".\objects\main.o"
-".\objects\stm32f4xx_it.o"
 ".\objects\led.o"
 ".\objects\mpu6050.o"
 ".\objects\myi2c.o"
@@ -53,6 +51,9 @@
 ".\objects\oled.o"
 ".\objects\motor.o"
 ".\objects\pwm.o"
+".\objects\imu.o"
+".\objects\main.o"
+".\objects\stm32f4xx_it.o"
 --strict --scatter ".\Objects\Project.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

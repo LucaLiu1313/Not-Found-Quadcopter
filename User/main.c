@@ -1,15 +1,16 @@
-#include "stm32f4xx.h"                  // Device header
-#include "stm32f4xx_rcc.h"
-#include "stm32f4xx_gpio.h"
-#include "Delay.h"
-#include "MPU6050.h"
-#include "HMC5883L.h"  
-#include "Serial.h"
-#include "MyI2C.h"
-#include "MPU6050_Reg.h"
-#include "OLED.h"
-#include "OLED.h"
-
+//#include "stm32f4xx.h"                  // Device header
+//#include "stm32f4xx_rcc.h"
+//#include "stm32f4xx_gpio.h"
+//#include "Delay.h"
+//#include "MPU6050.h"
+//#include "HMC5883L.h"  
+//#include "Serial.h"
+//#include "MyI2C.h"
+//#include "MPU6050_Reg.h"
+//#include "OLED.h"
+//#include "OLED.h"
+//#include "pwm.h"
+#include "imu.h"
 
 void GPIO_INIT(void)
 {
@@ -26,6 +27,8 @@ int16_t AX,AY,AZ,GX,GY,GZ,GH;
 int16_t  X , Y , Z,GaX;
 int32_t Pressure;
 int16_t MX,MY,MZ;
+float pitch,roll,yaw;
+
 int main()
 {
 	OLED_Init();
@@ -35,65 +38,103 @@ int main()
 	GPIO_INIT();
 	HMC5883L_Init();
 	
+
+//	PWM_Init();
+//	PWM_SetCompare1(700);
+//	Delay_ms(4000);
+//	PWM_SetCompare1(400);
+//	Delay_ms(2000);
+
+//    PWM_SetCompare1(600);	
+	
 	while(1)
 	{
-		if(Serial_GetRxData()==1)
-		{
- 	    GH=MPU6050_ReadReg(MPU6050_PWR_MGMT_1);
-        MPU6050_GetData (&AX,&AY,&AZ,&GX,&GY,&GZ);
-		
-		
-			// 发送陀螺仪数据
-				Serial_SendNumber(GX, 2);
-				Serial_SendString("\n");
-				Serial_SendNumber(GY, 2);
-				Serial_SendString("\n");
-				Serial_SendNumber(GZ, 2);
-				Serial_SendString("\n");
-
-				
-				// 发送加速度数据
-				Serial_SendNumber(AX, 2);
-				Serial_SendString("\n");
-				Serial_SendNumber(AY, 2);
-				Serial_SendString("\n");
-				Serial_SendNumber(AZ, 2);
-				Serial_SendString("\n");
-				Delay_ms (100);//防止烧
-
-		}
-		
-	if(Serial_GetRxData()==2)
-			{
-		MPU_get_HMC();
-				HMC5883L_GetData(&MX,&MY,&MZ);
-
-				
-				// 发送磁力计数据
-				Serial_SendNumber(MX, 2);
-				Serial_SendString("\n");
-				Serial_SendNumber(MY, 2);
-				Serial_SendString("\n");
-				Serial_SendNumber(MZ, 2);
-				Serial_SendString("\n");
-
-
-		Delay_ms (10);//防止烧
-			}
-		OLED_ShowSignedNum(2, 1, AX, 5);
-		OLED_ShowSignedNum(3, 1, AY, 5);
-		OLED_ShowSignedNum(4, 1, AZ, 5);
-		OLED_ShowSignedNum(2, 8, GX, 5);
-		OLED_ShowSignedNum(3, 8, GY, 5);
-		OLED_ShowSignedNum(4, 8, GZ, 5);
-		OLED_ShowSignedNum(1, 1, MX, 5);
-		OLED_ShowSignedNum(1, 8, MY, 5);
-		
-	}
-	
-	
-
-			
+		IMU_update(&pitch, &roll, &yaw);
+		//串口发送姿态 {"roll": 10.5, "pitch": -5.2, "yaw": 45.0}
+		Serial_SendString("{\"roll\":");
+		Serial_SendFloatSimple(roll, 1);
+		Serial_SendString(",\"pitch\":");
+		Serial_SendFloatSimple(pitch, 1);
+		Serial_SendString(",\"yaw\":");
+		Serial_SendFloatSimple(yaw, 1);
+		Serial_SendString("}\n");
+		int16_t m = 400 + (int16_t)yaw;
+		PWM_SetCompare1(400);
+//		Serial_SendString("\"roll\": ");
+//		Serial_SendFloat(roll, 3, 1);
+//		//Serial_SendNumber(roll, 2);
+//		Serial_SendString(",");
+//		Serial_SendString("\"pitch\": ");
+//		Serial_SendFloat(pitch, 3, 1);
+//		//Serial_SendNumber(pitch, 2);
+//		Serial_SendString(",");
+//		Serial_SendString("\"yaw\": ");
+//		Serial_SendFloat(yaw, 3, 1);
+//		//Serial_SendNumber(yaw, 2);
+//		Serial_SendString("\n");
+		//OLED显示
+		OLED_ShowString(2,1,"Pitch=");
+		OLED_ShowString(3,1,"Roll=");
+		OLED_ShowString(4,1,"Yaw=");
+		OLED_ShowFNum(2, 8, pitch, 5,2);
+		OLED_ShowFNum(3, 8, roll, 5,2);
+		OLED_ShowFNum(4, 8, yaw, 5,2);
+	}		
 }
+//if(Serial_GetRxData()==1)
+//		{
+// 	    GH=MPU6050_ReadReg(MPU6050_PWR_MGMT_1);
+//        MPU6050_GetData (&AX,&AY,&AZ,&GX,&GY,&GZ);
+//		
+//		
+//			// 发送陀螺仪数据
+//				Serial_SendNumber(GX, 2);
+//				Serial_SendString("\n");
+//				Serial_SendNumber(GY, 2);
+//				Serial_SendString("\n");
+//				Serial_SendNumber(GZ, 2);
+//				Serial_SendString("\n");
+
+//				
+//				// 发送加速度数据
+//				Serial_SendNumber(AX, 2);
+//				Serial_SendString("\n");
+//				Serial_SendNumber(AY, 2);
+//				Serial_SendString("\n");
+//				Serial_SendNumber(AZ, 2);
+//				Serial_SendString("\n");
+//				Delay_ms (100);//防止烧
+
+//		}
+//		
+//	if(Serial_GetRxData()==2)
+//			{
+//		MPU_get_HMC();
+//				HMC5883L_GetData(&MX,&MY,&MZ);
+
+//				
+//				// 发送磁力计数据
+//				Serial_SendNumber(MX, 2);
+//				Serial_SendString("\n");
+//				Serial_SendNumber(MY, 2);
+//				Serial_SendString("\n");
+//				Serial_SendNumber(MZ, 2);
+//				Serial_SendString("\n");
+
+
+//		Delay_ms (10);//防止烧
+//			}
+//		OLED_ShowSignedNum(2, 1, AX, 5);
+//		OLED_ShowSignedNum(3, 1, AY, 5);
+//		OLED_ShowSignedNum(4, 1, AZ, 5);
+//		OLED_ShowSignedNum(2, 8, GX, 5);
+//		OLED_ShowSignedNum(3, 8, GY, 5);
+//		OLED_ShowSignedNum(4, 8, GZ, 5);
+//		OLED_ShowSignedNum(1, 1, MX, 5);
+//		OLED_ShowSignedNum(1, 8, MY, 5);
+//		
+//	
+//	
+	
 
 

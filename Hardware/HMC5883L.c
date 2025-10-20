@@ -78,3 +78,29 @@ void HMC5883L_GetData(int16_t * magn_x_gs,int16_t *magn_y_gs,int16_t *magn_z_gs)
 	DataL=MPU6050_ReadReg (0x06);
 	* magn_z_gs = ((DataH<<8)|DataL)/660.0f;
 }
+
+void HMC5883L_GetData1(int16_t * magn_x_gs,int16_t *magn_y_gs,int16_t *magn_z_gs)
+{
+	uint8_t DataH, DataL;
+	int16_t t;
+//	OLED_ShowChar(2, 1, 'A');
+	
+	DataH=HMC5883L_ReadReg(0x03);
+//	OLED_ShowChar(1, 2, 'B');
+	DataL=HMC5883L_ReadReg(0x04);
+//	OLED_ShowChar(1, 3, 'C');
+	t = ((DataH<<8)|DataL);
+//	OLED_ShowChar(1, 4, 'D');
+	* magn_x_gs = (int16_t)(t);
+	
+	DataH=HMC5883L_ReadReg(0x07);
+	DataL=HMC5883L_ReadReg(0x08);
+	t = ((DataH<<8)|DataL);
+	* magn_y_gs = (int16_t)(t);
+//	OLED_ShowChar(1, 3, 'C');
+	
+	DataH=HMC5883L_ReadReg(0x05);
+	DataL=HMC5883L_ReadReg(0x06);
+	* magn_z_gs = ((DataH<<8)|DataL);
+	
+}

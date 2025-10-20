@@ -91,7 +91,7 @@ void MyI2C_SendAck(uint8_t AckBit)
 	MyI2C_W_SCL(0);							//拉低SCL，开始下一个时序模块
 }
 
-uint8_t MyI2C_ReceiveAck(void)
+void MyI2C_ReceiveAck(void)
 {
 	uint8_t AckBit;							//定义应答位变量
 	MyI2C_W_SDA(1);							//接收前，主机先确保释放SDA，避免干扰从机的数据发送

@@ -1,7 +1,7 @@
 .\objects\serial.o: ..\Hardware\Serial.c
 .\objects\serial.o: ..\CMSIS\stm32f4xx.h
 .\objects\serial.o: ..\CMSIS\include\core_cm4.h
-.\objects\serial.o: D:\keil\keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\serial.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\serial.o: ..\CMSIS\include\core_cmInstr.h
 .\objects\serial.o: ..\CMSIS\include\core_cmFunc.h
 .\objects\serial.o: ..\CMSIS\include\core_cmSimd.h

@@ -1,7 +1,7 @@
 .\objects\mpu6050.o: ..\Hardware\MPU6050.c
 .\objects\mpu6050.o: ..\CMSIS\stm32f4xx.h
 .\objects\mpu6050.o: ..\CMSIS\include\core_cm4.h
-.\objects\mpu6050.o: D:\keil\keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\mpu6050.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\mpu6050.o: ..\CMSIS\include\core_cmInstr.h
 .\objects\mpu6050.o: ..\CMSIS\include\core_cmFunc.h
 .\objects\mpu6050.o: ..\CMSIS\include\core_cmSimd.h

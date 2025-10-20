@@ -1,7 +1,9 @@
 .\objects\main.o: ..\User\main.c
+.\objects\main.o: ..\imu\imu.h
+.\objects\main.o: D:\Keil5\ARM\ARMCC\Bin\..\include\math.h
 .\objects\main.o: ..\CMSIS\stm32f4xx.h
 .\objects\main.o: ..\CMSIS\include\core_cm4.h
-.\objects\main.o: D:\keil\keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\main.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\main.o: ..\CMSIS\include\core_cmInstr.h
 .\objects\main.o: ..\CMSIS\include\core_cmFunc.h
 .\objects\main.o: ..\CMSIS\include\core_cmSimd.h
@@ -41,3 +43,4 @@
 .\objects\main.o: ..\Hardware\MyI2C.h
 .\objects\main.o: ..\Hardware\MPU6050_Reg.h
 .\objects\main.o: ..\Hardware\OLED.h
+.\objects\main.o: ..\Hardware\pwm.h

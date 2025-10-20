@@ -83,4 +83,3 @@ void PWM_SetCompare3(uint32_t ccr) {
 void PWM_SetCompare4(uint32_t ccr) {
     TIM_SetCompare4(TIM3, ccr); // ?? CH4 (PA3) ????
 }
- 
