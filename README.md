@@ -23,8 +23,6 @@ This is a bare-metal STM32F401 flight controller project focused on attitude est
 - `CMSIS/`: startup and system init
 - `Library/`: STM32F4 StdPeriph library
 - `Project/`: Keil MDK project and build artifacts
-- `Drone_uCOS/`: uCOS-based variant (with its own README and tools)
-- `可飞行版本1.zip`: archived build
 
 ## Hardware and Pin Map
 **MCU and sensors**
